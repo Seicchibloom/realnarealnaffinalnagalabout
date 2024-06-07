@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView5"
+        android:layout_width="wrap_content"
+        android:layout_height="734dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"><![CDATA[>
+
+            ]]>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="412dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/boholpicpage2" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:paddingHorizontal="30dp"
+                android:text="Bohol"
+                android:textColor="#000000"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Bohol, in the Central Visayas Region, is the Philippines' 10th largest island, renowned for its chocolate hills and beautiful beaches. Tagbilaran City is its commercial hub and entry point, with Alona Beach nearby. The province offers a mix of natural beauty and history, from jungle treks to colonial architecture. The Chocolate Hills are a must-see, along with caves and rock formations, making Bohol a top destination in Southeast Asia."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="What's around Bohol"
+                android:textColor="#000000"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/panglao" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Panglao Island"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/hinagdanan" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Hinagdanan Cave"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/magaso" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Mag-Aso Falls"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

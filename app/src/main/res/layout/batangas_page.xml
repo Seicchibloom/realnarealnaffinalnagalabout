@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView5"
+        android:layout_width="wrap_content"
+        android:layout_height="734dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"><![CDATA[>
+
+            ]]>
+
+            z
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="412dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/batangaspicpage1" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:paddingHorizontal="30dp"
+                android:text="Batangas"
+                android:textColor="#000000"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Batangas City, officially known as the City of Batangas, is a first-class component city and the capital of Batangas province in the Philippines. It has a population of 351,437 people according to the 2020 census. Batangas is a top tourist spot near Metro Manila, known for its beautiful beaches and fantastic diving spots like Anilao in Mabini, Sombrero Island in Tingloy, and Ligpo Island in Bauan. These areas are popularly known as Anilao."
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="What's around Batangas"
+                android:textColor="#000000"
+                android:textSize="40sp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/laiya" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Laiya "
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/fantasyworld1" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Fantasy World"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="360dp"
+                android:layout_height="164dp"
+                app:srcCompat="@drawable/taallake" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:fontFamily="@font/cabin_condensed_bold"
+                android:text="Taal Volcano"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
