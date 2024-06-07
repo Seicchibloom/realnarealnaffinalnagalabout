@@ -18,8 +18,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class BookingPage extends Fragment {
 
@@ -157,19 +160,36 @@ public class BookingPage extends Fragment {
         try {
             String encodedEmail = userEmail.replace(".", ",");
             DatabaseReference bookingsReference = firebaseDatabase.getReference("bookings").child(encodedEmail);
-            bookingsReference.removeValue()
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(getContext(), "Bookings deleted successfully!", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getContext(), "Failed to delete bookings", Toast.LENGTH_SHORT).show();
-                            Log.e("BookingPage", "Error: " + task.getException().getMessage());
-                        }
-                    });
+
+            bookingsReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        bookingsReference.removeValue()
+                                .addOnCompleteListener(task -> {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getContext(), "Bookings deleted successfully!", Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(getContext(), "Failed to delete bookings", Toast.LENGTH_SHORT).show();
+                                        Log.e("BookingPage", "Error: " + task.getException().getMessage());
+                                    }
+                                });
+                    } else {
+                        Toast.makeText(getContext(), "No bookings found for the given email", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    Toast.makeText(getContext(), "Error checking bookings: " + databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                    Log.e("BookingPage", "Error: " + databaseError.getMessage());
+                }
+            });
         } catch (Exception e) {
             Log.e("BookingPage", "Error deleting from Firebase: ", e);
         }
     }
+
 
     public static class Booking {
         public String place;
